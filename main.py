@@ -45,9 +45,9 @@ while(1):
         while(i < height):
             while(j < width):
                 px_1 = resize[i, j]
-                px_2 = resize[i + 1, j + 1]
-                px_3 = resize[i + 2, j + 2]
-                px_4 = resize[i + 3, j + 3]
+                px_2 = resize[i, j + 1]
+                px_3 = resize[i, j + 2]
+                px_4 = resize[i, j + 3]
 
                 px_1 = str(bin(px_1)[2:].zfill(8))
                 px_2 = str(bin(px_2)[2:].zfill(8))
@@ -58,9 +58,10 @@ while(1):
                 f.write("\t")
                 f.write(str(k) + " : " + pixels + ";")
                 f.write("\n")
+
                 j += 4
                 k += 1
-            i += 4
+            i += 1
             j = 0
 
         f.write("\t")
