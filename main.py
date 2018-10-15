@@ -54,7 +54,7 @@ while(1):
                 px_3 = str(bin(px_3)[2:].zfill(8))
                 px_4 = str(bin(px_4)[2:].zfill(8))
 
-                pixels = px_1 + px_2 + px_3 + px_4
+                pixels = px_4 + px_3 + px_2 + px_1
                 f.write("\t")
                 f.write(str(k) + " : " + pixels + ";")
                 f.write("\n")
